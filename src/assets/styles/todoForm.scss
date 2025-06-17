@@ -1,0 +1,54 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+.todo-form {
+    background-color: #9da2e7;
+    border: 3px solid #000;
+    border-radius: $border-radius-default;
+    margin-top: 50px;
+    box-shadow: $shadow;
+
+    h2 {
+        color: #000;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .form {
+        padding: 10px;
+
+        .form-element {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: $font-size-default;
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            height: 40px;
+            width: 200px;
+            color: #fff;
+            background-color: $add-task-button-color;
+            border: none;
+            font-size: $font-size-default;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: $shadow;
+            border-radius: $border-radius-default;
+
+            &:hover {
+                background-color: color.scale($add-task-button-color, $lightness: -10%);
+            }
+
+        }
+
+    }
+}

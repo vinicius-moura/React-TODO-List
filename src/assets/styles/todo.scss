@@ -1,9 +1,10 @@
-@use 'sass:color';
 @use 'variables' as *;
+@use 'sass:color';
 
 .todo {
     display: grid;
     grid-template-columns: 80% 20%;
+    background-color: #fff;
     border: 3px solid #000;
     border-radius: $border-radius-default;
     margin-top: 10px;
@@ -12,7 +13,7 @@
 
     .content {
         p {
-            font-size: 20px;
+            font-size: $font-size-default;
         }
     }
 
@@ -23,9 +24,9 @@
         margin: 10px;
 
         button {
-            color: white;
+            color: #fff;
             border: none;
-            font-size: 18px;
+            font-size: $font-size-default;
             display: flex;
             align-items: center;
             justify-content: center;

@@ -34,7 +34,7 @@ function App() {
         <Todo todo={todo} />
       ))}
     </div>
-    {/* <TodoForm /> */}
+    {<TodoForm />}
   </div>
 }
 
