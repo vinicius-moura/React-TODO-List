@@ -1,0 +1,59 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+.todo {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    border: 3px solid #000;
+    border-radius: $border-radius-default;
+    margin-top: 10px;
+    padding: 15px;
+    box-shadow: $shadow;
+
+    .content {
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+
+        button {
+            color: white;
+            border: none;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: $shadow;
+            margin: 10px;
+        }
+
+        .complete {
+            width: 120px;
+            height: 40px;
+            background-color: $confirm-button-color;
+            border-radius: $border-radius-default;
+
+            &:hover {
+                background-color: color.scale($confirm-button-color, $lightness: -10%);
+            }
+        }
+
+        .cancel {
+            width: 40px;
+            height: 40px;
+            background-color: $cancel-button-color;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: color.scale($cancel-button-color, $lightness: -10%);
+            }
+        }
+    }
+}
