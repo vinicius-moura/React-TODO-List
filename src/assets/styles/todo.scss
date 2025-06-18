@@ -12,8 +12,11 @@
     box-shadow: $shadow;
 
     .content {
-        p {
-            font-size: $font-size-default;
+        font-size: $font-size-default;
+        color: #000;
+
+        &.completed {
+            text-decoration: line-through;
         }
     }
 
